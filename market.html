@@ -18,30 +18,8 @@
 
     <link rel="stylesheet" href="css/main.css" />
 
-    <link rel="stylesheet" href="css/main.css" />
-    <style>
-        @media only screen and (max-width: 767px) {
+    <link rel="stylesheet" href="css/market.css" />
 
-            .btmNav {
-                transform: translateX(0) !important;
-                position: fixed !important;
-                width: 100% !important;
-                height: auto !important;
-                bottom: 0 !important;
-            }
-
-            .btmNav ul li a {
-                height: auto !important;
-            }
-
-            .btmNav ul li.active:after { display: none !important; }
-
-            .btmNav ul li span {
-                font-size: 1.5vmax;
-            }
-
-        }
-    </style>
 </head>
 
 <body id="app-container" class="menu-default show-spinner">
@@ -304,64 +282,74 @@
 
                     <div class="row">
                         <div class="col-md-12 mb-2 px-0">
-                            <div class="slick-container">
-                                <div class="slick single">
 
-                                    <div class="card d-flex flex-row mb-3">
-                                        <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?schools" 
-                                            class="responsive border-0 card m-auto" 
-                                            style="object-fit: cover; width: 100%; height: 200px;">
-                                    </div>
-                                    <div class="card d-flex flex-row mb-3">
-                                        <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?foods" 
-                                        class="responsive border-0 card m-auto" 
-                                        style="object-fit: cover; width: 100%; height: 200px;">
-                                    </div>
-                                    <div class="card d-flex flex-row mb-3">
-                                        <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?work" 
-                                            class="responsive border-0 card m-auto" 
-                                            style="object-fit: cover; width: 100%; height: 200px;">
+                            <div class="glide single">
+                                <div class="glide__track pb-3" data-glide-el="track">
+                                    <div class="glide__slides">
+
+                                        <div class="glide__slide">
+                                            <div class="card d-flex flex-row mb-3">
+                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?schools" 
+                                                class="responsive border-0 card m-auto" > 
+                                            </div>
+                                        </div>
+
+                                        <div class="glide__slide">
+                                            <div class="card d-flex flex-row mb-3">
+                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?foods" 
+                                                class="responsive border-0 card m-auto" >
+                                            </div>
+                                        </div>
+
+                                        <div class="glide__slide">
+                                            <div class="card d-flex flex-row mb-3">
+                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?works" 
+                                                class="responsive border-0 card m-auto" >
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
-
-                                <div class="slick-navs-dots slider-nav text-center">
-                                    <!-- <a href="#" class="left-arrow">
-                                        <i class="simple-icon-arrow-left"></i>
-                                    </a> -->
-                                    <div class="slider-dot-container"></div>
-                                    <!-- <a href="#" class="right-arrow">
-                                        <i class="simple-icon-arrow-right"></i>
-                                    </a> -->
+                                <div class="glide__arrows slider-nav" data-glide-el="controls">
+                                    <!-- <button class="glide__arrow glide__arrow--left left-arrow btn btn-link"
+                                        data-glide-dir="<"><i class="simple-icon-arrow-left"></i></button> -->
+                                    <div class="glide__bullets slider-dot-container" data-glide-el="controls[nav]">
+                                        <button class="glide__bullet slider-dot" data-glide-dir="=0"></button>
+                                        <button class="glide__bullet slider-dot" data-glide-dir="=1"></button>
+                                        <button class="glide__bullet slider-dot" data-glide-dir="=2"></button>
+                                    </div>
+                                    <!-- <button class="glide__arrow glide__arrow--right right-arrow btn btn-link"
+                                        data-glide-dir=">"><i class="simple-icon-arrow-right"></i></button> -->
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="row col-12 col-md-10 px-1 bg-white mx-auto mb-4" style="border-radius: 10px;">
-                        <div class="col-2 py-2 px-0 d-flex" style="border-right: 2px solid rgba(0,0,0,.3);">
+                    <div id="finance" class="row col-12 col-md-10 px-1 bg-white mx-auto mb-4 borad-10" >
+                        <div id="qr-code" class="col-2 py-2 px-0 d-flex">
                             <a href="#" class="m-auto d-flex flex-column">
-                                <i class="iconsminds-qr-code text-center" style="font-size: 3em;"></i> 
+                                <i class="iconsminds-qr-code text-center"></i> 
                                 <span class="text-center"> Scan QR </span>
                             </a>         
                         </div>
-                        <div class="col-6 py-2 px-0 d-flex" style="border-right: 2px solid rgba(0,0,0,.3);">
+                        <div id="balance" class="col-6 py-2 px-0 d-flex">
                             <a href="#" class="col-6 col-md-4 m-auto d-flex flex-column px-0">
-                                <i class="iconsminds-wallet m-auto" style="font-size: 3em;"></i> 
+                                <i class="iconsminds-wallet m-auto"></i> 
                                 <span class="text-center"> Kanesa Pay </span>
                             </a>
                             <h3 class="col-6 col-md-8 m-auto text-center px-0">Rp 999.999</h3>
                         </div>
-                        <div class="col-4 py-2 px-0 d-flex">
+                        <div id="voucher" class="col-4 py-2 px-0 d-flex">
                             <a href="#" class="col-6 col-md-4 m-auto d-flex flex-column px-0">
-                                <i class="iconsminds-mail-3 m-auto" style="font-size: 3em;"></i> 
+                                <i class="iconsminds-mail-3 m-auto"></i> 
                                 <span class="text-center"> Voucher </span>
                             </a>
                             <h3 class="col-6 col-md-8 m-auto text-center px-0"> 3 </h3>         
                         </div>
                     </div>
 
-                    <div class="row col-12 px-1 bg-white mx-auto mb-4" style="border-radius: 10px;">
+                    <div id="category" class="row col-12 px-1 bg-white mx-auto mb-4 borad-10" >
                         <ul class="nav nav-pills nav-fill w-100 my-2">
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">
@@ -381,41 +369,41 @@
                         </ul>
                         <div class="row col-12 px-0 d-flex m-auto">
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-notepad m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-notepad m-auto"></i> 
                                 <span class="text-center"> Alat tulis </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-hamburger m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-hamburger m-auto" ></i> 
                                 <span class="text-center"> Food &amp; Drink </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-jacket m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-jacket m-auto" ></i> 
                                 <span class="text-center"> Fashion </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-books m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-books m-auto" ></i> 
                                 <span class="text-center"> Books </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-gears m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-gears m-auto" ></i> 
                                 <span class="text-center"> Otomotif </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-electricity m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-electricity m-auto" ></i> 
                                 <span class="text-center"> Electronic </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-router m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-router m-auto" ></i> 
                                 <span class="text-center"> Network </span>
                             </a>
                             <a href="#" class="col-3 text-center px-0 mb-3 d-flex flex-column mx-auto">
-                                <i class="iconsminds-monitor m-auto" style="font-size: 4em;"></i> 
+                                <i class="iconsminds-monitor m-auto" ></i> 
                                 <span class="text-center"> Software </span>
                             </a>
                         </div>
                     </div>
 
-                    <div class="row col-12 px-1 bg-white mx-auto mb-4" style="border-radius: 10px;">
+                    <div class="row col-12 px-1 bg-white mx-auto mb-4 borad-10" >
                         <h2 class="m-3">
                             <b>Official Store</b>
                         </h2>
@@ -428,41 +416,46 @@
 
                                         <div class="glide__slide">
                                             <div class="card">
-                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?schools" 
-                                                class="responsive border-0 card m-auto" 
-                                                style="object-fit: cover; width: 100%; height: 200px;">
+                                                <a href="#">
+                                                    <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?schools" 
+                                                    class="responsive border-0 card m-auto">
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="glide__slide">
                                             <div class="card">
-                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?foods" 
-                                                class="responsive border-0 card m-auto" 
-                                                style="object-fit: cover; width: 100%; height: 200px;">
+                                                <a href="#">
+                                                    <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?foods" 
+                                                    class="responsive border-0 card m-auto">
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="glide__slide">
                                             <div class="card">
-                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?work" 
-                                                class="responsive border-0 card m-auto" 
-                                                style="object-fit: cover; width: 100%; height: 200px;">
+                                                <a href="#">
+                                                    <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?work" 
+                                                    class="responsive border-0 card m-auto">
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="glide__slide">
                                             <div class="card">
-                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?nature" 
-                                                class="responsive border-0 card m-auto" 
-                                                style="object-fit: cover; width: 100%; height: 200px;">
+                                                <a href="#">
+                                                    <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?nature" 
+                                                    class="responsive border-0 card m-auto">
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="glide__slide">
                                             <div class="card">
-                                                <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?office" 
-                                                class="responsive border-0 card m-auto" 
-                                                style="object-fit: cover; width: 100%; height: 200px;">
+                                                <a href="#">
+                                                    <img alt="Thumbnail" src="https://source.unsplash.com/800x600/?office" 
+                                                    class="responsive border-0 card m-auto">
+                                                </a>
                                             </div>
                                         </div>
 
@@ -485,7 +478,7 @@
                         </div>
                     </div>
 
-                    <div class="row col-12 px-1 bg-white mx-auto mb-4" style="border-radius: 10px;">
+                    <div class="row col-12 px-1 bg-white mx-auto mb-4 borad-10" >
                         <h2 class="m-3">
                             <b>Voucher & Promo</b>
                         </h2>
